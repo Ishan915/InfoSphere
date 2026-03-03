@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Trading & Market Economy Research (2000–2026)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="kicker">Research Dashboard</p>
+      <h1>Global Economy for Trading & Markets (2000–2026)</h1>
+      <p>
+        Interactive research hub covering macro trends, risk regimes, and market behavior from the dot-com era
+        through the 2026 outlook.
+      </p>
+    </div>
+    <div class="hero-stat-grid" id="heroStats"></div>
+  </header>
+
+  <main>
+    <section class="controls card">
+      <h2>Find Insights Fast</h2>
+      <label for="searchInput">Search research categories, events, and indicators</label>
+      <div class="search-wrap">
+        <input id="searchInput" type="text" placeholder="Try: inflation shock, commodities, central banks..." autocomplete="off" />
+        <button id="clearSearch" aria-label="Clear search">Clear</button>
+      </div>
+      <div id="suggestions" class="suggestions" aria-live="polite"></div>
+
+      <div class="filters" id="categoryFilters"></div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Macro Regime Timeline</h2>
+        <p class="muted">Filtered event summaries with trading relevance and evidence links.</p>
+        <div id="timeline" class="timeline"></div>
+      </article>
+
+      <article class="card">
+        <h2>Market Statistics</h2>
+        <p class="muted">Annualized trend estimates across the full period.</p>
+        <div id="statistics" class="stats"></div>
+      </article>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h2>Global GDP Growth (YoY %)</h2>
+        <canvas id="gdpChart" width="720" height="320" aria-label="GDP growth chart"></canvas>
+      </article>
+      <article class="card">
+        <h2>US CPI Inflation (YoY %)</h2>
+        <canvas id="inflationChart" width="720" height="320" aria-label="Inflation chart"></canvas>
+      </article>
+      <article class="card">
+        <h2>S&P 500 Annual Returns (%)</h2>
+        <canvas id="equityChart" width="720" height="320" aria-label="Equity return chart"></canvas>
+      </article>
+      <article class="card">
+        <h2>Commodity Index Proxy (Normalized)</h2>
+        <canvas id="commodityChart" width="720" height="320" aria-label="Commodity chart"></canvas>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Evidence & Data Sources</h2>
+      <p class="muted">
+        Dataset in this demo is a research synthesis built from the public institutions below to support educational
+        strategy exploration.
+      </p>
+      <ul id="evidenceList" class="evidence"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for strategic market research. Use with independent validation before live trading decisions.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
